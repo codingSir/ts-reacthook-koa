@@ -1,0 +1,91 @@
+.input_content{
+  font-size: 16px;
+  width: 256px;
+  min-height: 48px;
+  display: inline-block;
+  position: relative;
+  color: rgba(0,0,0,.54);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  padding-top: 4px;
+  .input_filed{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    input{
+      -webkit-appearance:none;
+      outline: none;
+      border: none;
+      background: none;
+      border-radius: 0 0 0 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 32px;
+      font-style: inherit;
+      font-variant: inherit;
+      font-weight: inherit;
+      font-stretch: inherit;
+      font-size: inherit;
+      color: rgba(0,0,0,.87);
+      position: relative;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      text-underline: none;
+    }
+    input:-webkit-autofill{
+      -webkit-box-shadow: 0 0 0 1000px #fafafa  inset;
+    }
+    .input_line{
+      margin: 0;
+      height: 1px;
+      border: none;
+      background-color: rgba(0,0,0,.12);
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      position: absolute
+    }
+    .input_force_line{
+      margin: 0;
+      height: 2px;
+      border: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      transform-origin: left;
+      -webkit-transition: -webkit-transform .45s cubic-bezier(.23,1,.32,1);
+      transition: -webkit-transform .45s cubic-bezier(.23,1,.32,1);
+      transition: transform .45s cubic-bezier(.23,1,.32,1);
+    }
+    input:focus{
+      ~div:nth-of-type(2){
+        background-color: $primary-color;
+        transform: scaleX(1);
+      }
+    }
+  }
+  .phone_tips{
+    color: red;
+    font-size: 12px;
+    display: inline-block;
+    animation: show .3s;
+  }
+  @keyframes show {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+}

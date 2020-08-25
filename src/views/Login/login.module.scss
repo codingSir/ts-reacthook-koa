@@ -1,0 +1,62 @@
+.header{
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  display: inline-block;
+  font-size: 14px;
+  width: 73px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: color .3s,border .3s;
+  &:hover{
+    color: $primary-color;
+  }
+}
+
+.logo{
+  width: 140px;
+  height: 48px;
+  cursor: pointer;
+}
+.login_button{
+  flex: 1;
+  text-align: right;
+}
+
+.content{
+  height: 100%;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  p{
+    margin: 60px;
+    font-weight: 100;
+    font-size: 72px;
+    color: #1F303B;
+    text-align: center;
+  }
+
+  .icon_content{
+      background-color: #F2F2F2;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      text-align: center;
+     i{
+       font-size: 25px;
+       color: #000000;
+       cursor: pointer;
+     }
+     &:hover{
+        i{
+          color: $primary-color;
+        }
+     }
+  }
+}
